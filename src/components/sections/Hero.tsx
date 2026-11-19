@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { CaretDown, WhatsappLogo } from '@phosphor-icons/react';
-import { assets, business } from '../../data/business';
+import { business } from '../../data/business';
+import { assets } from '../../data/assets';
 import { useGsap } from '../../hooks/useGsap';
 import { gsap, ScrollTrigger } from '../../lib/gsap';
 import { Button } from '../ui/Button';

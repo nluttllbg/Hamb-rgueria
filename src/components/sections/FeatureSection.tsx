@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Fire, Hamburger, Moped, Smiley } from '@phosphor-icons/react';
-import { assets } from '../../data/business';
+import { assets } from '../../data/assets';
 import { useGsap } from '../../hooks/useGsap';
 import { animationPresets } from '../../animations/animationPresets';
 import { gsap } from '../../lib/gsap';

@@ -29,12 +29,3 @@ export const business = {
     sun: ['18:00', '23:00'],
   } as Record<DayKey, [string, string]>,
 } as const;
-
-export const assets = {
-  heroDesktop: '/src/assets/images/hero_desktop_1795082264038.jpg',
-  heroMobile: '/src/assets/images/hero_mobile_1795082266053.jpg',
-  mesaFamilia: '/src/assets/images/mesa_familia_1795082264968.jpg',
-  pulledPork: '/src/assets/images/pulled_pork_1795082265453.jpg',
-  burgerDestaque: '/src/assets/images/burger_destaque_1795082266817.jpg',
-  rodizioTabua: '/src/assets/images/rodizio_tabua_1795082264351.jpg',
-} as const;

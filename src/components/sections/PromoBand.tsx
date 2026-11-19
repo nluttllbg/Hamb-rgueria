@@ -1,5 +1,6 @@
 import { useRef, type ReactNode } from 'react';
-import { assets, business } from '../../data/business';
+import { business } from '../../data/business';
+import { assets } from '../../data/assets';
 import { useGsap } from '../../hooks/useGsap';
 import { gsap, ScrollTrigger } from '../../lib/gsap';
 import { LightningBolt } from '../svg/LightningBolt';
