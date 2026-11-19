@@ -1,0 +1,111 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+@theme {
+  --color-charcoal-900: #231E1C;
+  --color-charcoal-700: #3A3330;
+  --color-red-700: #B5221E;
+  --color-red-900: #7A1612;
+  --color-coral-500: #E8463E;
+  --color-coral-600: #D23A33;
+  --color-coral-700: #B8302A;
+  --color-yellow-400: #F4B41C;
+  --color-yellow-500: #E5A40F;
+  --color-orange-600: #E0661F;
+  --color-cream-50: #F7F1E3;
+  --color-cream-100: #EFE6D2;
+  --color-wood-700: #5A3520;
+  --color-text-muted: #6B625C;
+  --color-border-subtle: #E2D6BE;
+  --color-border-dark: #3D3532;
+  --color-success: #2E9E5B;
+
+  --font-display: 'Anton', 'Bebas Neue', Impact, sans-serif;
+  --font-body: 'Inter', 'DM Sans', system-ui, sans-serif;
+  --font-logo: 'Alfa Slab One', serif;
+  --font-script: 'Pacifico', cursive;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-cream-50);
+    color: var(--color-charcoal-900);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: var(--color-cream-50);
+    color: var(--color-charcoal-900);
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+  }
+}
+
+/* Editorial container matching Design System 1200px */
+.ds-container {
+  width: 100%;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 768px) {
+  .ds-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ds-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Nav link animated underline (scaleX 0 -> 1) */
+.nav-link-underline {
+  position: relative;
+}
+
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-yellow-400);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--dur-base) var(--ease);
+}
+
+.nav-link-underline:hover::after,
+.nav-link-underline[data-active="true"]::after {
+  transform: scaleX(1);
+}
+
+/* Soft edge blending for studio food photography on solid surfaces */
+.blend-on-yellow {
+  -webkit-mask-image: radial-gradient(ellipse 64% 64% at 50% 50%, #000 50%, transparent 88%);
+  mask-image: radial-gradient(ellipse 64% 64% at 50% 50%, #000 50%, transparent 88%);
+}
+
+.blend-platter-yellow {
+  -webkit-mask-image: radial-gradient(ellipse 74% 72% at 50% 60%, #000 54%, transparent 92%);
+  mask-image: radial-gradient(ellipse 74% 72% at 50% 60%, #000 54%, transparent 92%);
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nav-link-underline::after {
+    transition: none;
+  }
+}

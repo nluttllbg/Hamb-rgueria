@@ -1,0 +1,6 @@
+{
+  "name": "Burger in Casa | Hamburgueria",
+  "description": "Hamburgueria artesanal em Cidade Ocidental - GO. Especialista em burgers autorais, defumados e rodízio de mini hambúrgueres.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
